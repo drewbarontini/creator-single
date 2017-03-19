@@ -11,5 +11,6 @@ An application to serve up a static page with vanilla CSS and JavaScript. This i
 ## Go!
 
 ```shell
+$ npm install
 $ npm start
 ```
