@@ -9,7 +9,8 @@
     "build:css": "npm run clean-css && npm run autoprefixer",
     "build:js": "npm run uglify",
     "clean-css": "cleancss -o public/app.css src/app.css",
-    "start": "parallelshell 'npm run watch:css' 'npm run watch:js'",
+    "server": "http-server ./",
+    "start": "parallelshell 'npm run server' 'npm run watch:css' 'npm run watch:js'",
     "uglify": "uglifyjs src/app.js -m -o public/app.js",
     "watch:css": "onchange 'src/app.css' -- npm run build:css",
     "watch:js": "onchange 'src/app.js' -- npm run build:js"
@@ -20,6 +21,7 @@
     "autoprefixer": "^6.7.7",
     "clean-css": "^4.0.9",
     "clean-css-cli": "^4.0.9",
+    "http-server": "^0.9.0",
     "onchange": "^3.2.1",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^3.0.0",
