@@ -9,8 +9,7 @@
     "build:css": "npm run clean-css && npm run autoprefixer",
     "build:js": "npm run uglify",
     "clean-css": "cleancss -o public/app.css src/app.css",
-    "serve": "browser-sync start --server --files 'index.html' 'src/app.css, src/app.js'",
-    "start": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js'",
+    "start": "parallelshell 'npm run watch:css' 'npm run watch:js'",
     "uglify": "uglifyjs src/app.js -m -o public/app.js",
     "watch:css": "onchange 'src/app.css' -- npm run build:css",
     "watch:js": "onchange 'src/app.js' -- npm run build:js"
@@ -19,7 +18,6 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.18.8",
     "clean-css": "^4.0.9",
     "clean-css-cli": "^4.0.9",
     "onchange": "^3.2.1",
