@@ -1,8 +1,10 @@
 # Change Log
 
-## Unreleased
+## 1.0.1 - 2017-05-15
 
-Everything is up-to-date!
+### Fixed
+
+- `autoprefixer` NPM script
 
 ## 1.0.0 - 2017-04-24
 
